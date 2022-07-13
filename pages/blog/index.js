@@ -12,7 +12,7 @@ export default function Home() {
     const result = await axios.get('/api/blog') // 내 서버 기준 (상대경로) api/blog 알아서 찾아감
     setBlogList(result.data);
   };
-
+  
   useEffect(()=>{
     fetchData();
   },[]);  // 아무것도 안건드리면 한번 만 실행시킴
