@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import style from './index.module.css';
+import styles from './id.module.css';
 
 export default function Home() {
   const router = useRouter();
@@ -26,10 +27,13 @@ export default function Home() {
   }
   
   return (
-    <div className={style.blog}>
-      <h1>{blog.title}</h1>
-      <p className={style.blog}>{blog.content}</p>
-      <p className={style.blog}>{blog.writer}</p>
+    <div className={styles.blog}>
+      <div className={styles.title}>{blog.title}</div>
+      <div className={styles.content}>{blog.content}</div>
+      <div className={styles.writerWrapper}>
+        <div className={styles.writer}>{blog.writer}</div>
+        <div className={styles.readtime}>readtime : {blog.readTime}</div>
+      </div>
     </div>
   );
 }
