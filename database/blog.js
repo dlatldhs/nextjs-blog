@@ -1,6 +1,4 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-const blogList = [{
+export const blogList = [{
     id: 1,
     title: 'nextjs 사용법',
     content: 'Nextjs는 개발자를 편하게 해줍니다',
@@ -14,7 +12,3 @@ const blogList = [{
     readTime: 2,
     writer: 'dlatldhs',
 },]
-export default function handler(req, res) {
-    res.json(blogList)
-  }
-  
