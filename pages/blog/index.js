@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import style from './index.module.css';
 
 export default function Home() {
   const [blogList, setBlogList] = useState([]);
@@ -21,7 +22,7 @@ export default function Home() {
       {/* <h1>{JSON.stringify(blogList)}</h1> */}
       {blogList.map((blog) => {
         return (
-          <div key={blog.id}>
+          <div className={style.blog} key={blog.id}>
             <div>{blog.id}</div>
             <div>{blog.title}</div>
             <div>{blog.content}</div>
